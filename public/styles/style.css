@@ -1,0 +1,80 @@
+.title-page {
+    position: relative;
+    background: white;
+    letter-spacing: 2px;
+}
+
+#sidebar-wrapper {
+    position: absolute;
+    min-height: 100vh;
+    width: 15rem;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    font-size: 0.9rem;
+    width: 15rem;
+}
+
+#sidebar-wrapper .list-group-item {
+    display: block;
+    padding-left: 2.5rem;
+    border: none;
+}
+
+#right-content {
+    padding: 1rem;
+    margin-left: 15rem;
+    min-height: 100vh;
+}
+
+#right-content a {
+    text-decoration: none;
+}
+
+#right-content .card {
+    border: none;
+}
+
+#right-content .card .card-title {
+    font-size: 24px;
+    line-height: 1em;
+    color: #333;
+}
+
+#right-content .card .card-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #666;
+}
+
+#right-content .card img {
+    max-height: 350px;
+}
+
+@media screen and (max-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+
+    #right-content {
+        margin-left: 0;
+    }
+}

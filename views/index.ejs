@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include ("./partials/header.ejs") %>
+</head>
+
+<body>
+  <%- include ("./partials/navbar.ejs") %>
+    <div class="title-page pt-3 ps-5">
+      <h3>SmartPhones</h3>
+    </div>
+    <hr>
+    <div class="content">
+      <!-- Sidebar -->
+      <div class="border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading ps-5">Marca </div>
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action">Samsung</a>
+          <a href="#" class="list-group-item list-group-item-action">Apple</a>
+          <a href="#" class="list-group-item list-group-item-action">LG</a>
+          <a href="#" class="list-group-item list-group-item-action">Motorola</a>
+          <a href="#" class="list-group-item list-group-item-action">Xiaomi</a>
+          <a href="#" class="list-group-item list-group-item-action">Huawei</a>
+        </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+      <div id="right-content">
+        <div class="container-fluid">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% for (var i = 0; i < phones.length; i++) { %>
+            <div class="col">
+              <a href="#">
+                <div class="shadow card h-100">
+                  <img src="<%= phones[i].img %>" class="card-img-top img-thumbnail" alt="<%= phones[i].name %>">
+                  <div class="card-body">
+                    <h5 class="card-title">S/. <%= phones[i].price %></h5>
+                    <p class="card-text"><%= phones[i].description %></p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><%= phones[i].name %></small>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include ("./partials/footer.ejs") %>
+</body>
+
+</html>

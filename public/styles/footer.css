@@ -1,0 +1,15 @@
+.footer {
+    bottom: 0;
+    width: 100%;
+    color: white;
+    line-height: 0px;
+}
+
+.footer .year{
+    font-size: 0.8rem;
+}
+
+.footer .year a{
+    text-decoration: none;
+    color: white;
+}
