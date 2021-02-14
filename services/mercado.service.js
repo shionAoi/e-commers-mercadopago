@@ -8,6 +8,7 @@ mercadoP.configure({
 const createPreference = async (preference) => {
     try {
         const response = await mercadoP.preferences.create(preference);
+        console.log(response.body.id);
         return response.body.init_point
     } catch (error) {
         console.log(error);
